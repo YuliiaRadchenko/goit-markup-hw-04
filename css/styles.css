@@ -1,0 +1,443 @@
+:root {
+  /* fonts */
+  --main-font: 'Roboto';
+  --secondary-font: 'Raleway';
+  
+  /* text colors */
+  --main-text-color: #757575;
+  --title-text-color: #212121;
+  --logo-top-color: #000000;
+  --accent-text-color: #2196F3;
+  --accent-button-color: #188CE8;
+  --footer-contacts-color: rgba(255, 255, 255, 0.6);
+  
+  --portfolio-card-border: #EEEEEE;
+  --header-border-color: #ECECEC;
+
+  /* bg colors */
+  --main-bg-color: #ffffff;
+  --dark-bg-color: #2F303A;
+  --light-bg-color: #F5F4FA;
+
+  --cards-gap: 30px;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  font-family: var(--main-font), sans-serif;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+/* reset */
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+
+img {
+  display: block;
+  height: auto;
+}
+
+/* Common styles start */
+  .container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .link {
+    text-decoration: none;
+  }
+
+  .list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+/* Common styles end */
+
+/* Main Page */
+/* Header */
+.nav-list,
+.contacts-list,
+.header-nav,
+.header-container {
+  display: flex;
+}
+
+.logo {
+  color: var(--accent-text-color);
+  font-size: 26px;
+  font-weight: 700;
+  font-family: var(--secondary-font), sans-serif;
+  line-height: 1.19;
+}
+
+.logo-top {
+  color: var(--logo-top-color);
+}
+
+.header-nav,
+.header-container {
+  align-items: center;
+}
+
+.nav-list {
+  margin-left: 93px;
+}
+
+.nav-list .nav-list-item+ .nav-list-item {
+  margin-left: 50px;
+}
+
+.nav-list .nav-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--title-text-color);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.contacts-list {
+  margin-left: auto;
+}
+
+.contacts-list .contacts-link {
+  color: var(--main-text-color);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.contacts-list .contacts-list-item+ .contacts-list-item {
+  margin-left: 50px;
+}
+
+.nav-list .nav-link:hover,
+.nav-list .nav-link:focus,
+.contacts-list .contacts-link:hover,
+.contacts-list .contacts-link:focus {
+  color: var(--accent-text-color);
+}
+
+.nav-list .nav-link.current {
+  color: var(--accent-text-color);
+}
+
+.header {
+  border-bottom: 1px solid var(--header-border-color);
+}
+
+/* Hero */
+.hero {
+  background-color: var(--dark-bg-color);
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.hero-title {
+  color: var(--main-bg-color);
+  font-weight: 900;
+  font-size: 44px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.36;
+  margin-bottom: 30px;
+  width: 696px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-button {
+  color: var(--main-bg-color);
+  background-color: var(--accent-text-color);
+  font-family: var(--main-font), sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: transparent;
+
+  padding-top: 10px;
+  padding-right: 32px;
+  padding-bottom: 10px;
+  padding-left: 32px;
+}
+
+.hero-button:hover,
+.hero-button:focus {
+  background-color: var(--accent-button-color);
+}
+
+
+/* Sections common */
+.features-title,
+.activities-title,
+.team-title,
+.portfolio-title {
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+/* Peculiarities */
+.features-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.features-list-title {
+  color: var(--title-text-color);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.14;
+  margin-bottom: 10px;
+}
+
+.features-list-item {
+  width: 270px;
+  margin-right: var(--cards-gap);
+}
+
+.features-list-item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.features {
+  padding-bottom: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+/* Activities */
+.activities-list {
+  display: flex;
+}
+
+.activities-list-item {
+  margin-right: var(--cards-gap);
+}
+
+.activities-list-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.activities-title {
+  margin-bottom: 50px;
+}
+
+
+/* Team */
+.team {
+  background-color: var(--light-bg-color);
+}
+
+.team-list {
+  display: flex;
+}
+
+.team-list .team-list-title {
+  color: var(--title-text-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.team-list .team-list-text {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.team-list-item {
+  width: calc((100% - 90px) / 4);
+  background-color: var(--main-bg-color);
+  margin-right: var(--cards-gap);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-list-item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.team-title {
+  margin-bottom: 50px;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--dark-bg-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.logo-down {
+  color: var(--main-bg-color);
+}
+
+.address-text {
+  color: var(--main-bg-color);
+  letter-spacing: 0.03em;
+  font-style: normal;
+}
+
+.address-contacts .address-link {
+  color: var(--footer-contacts-color);
+  font-style: normal;
+  letter-spacing: 0.03em;
+}
+
+.address-contacts .address-link:hover,
+.address-contacts .address-link:focus {
+  color: var(--accent-text-color);
+}
+
+.address {
+  margin-top: 20px;
+}
+
+.address-text,
+.address-item {
+  margin-bottom: 9px;
+}
+
+/* Portfolio Page*/
+.cards-title {
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.cards-category {
+  color: var(--main-text-color);
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+  margin-top: 4px;
+}
+
+.card-content {
+  padding-top: 20px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+}
+
+.portfolio-button {
+  padding-top: 6px;
+  padding-right: 22px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+  border: transparent;
+  border-radius: 4px;
+
+  color: var(--title-text-color);
+  background-color: var(--light-bg-color);
+  font-family: var(--main-font), sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+}
+
+.portfolio-button:hover,
+.portfolio-button:focus {
+  color: var(--main-bg-color);
+  background-color: var(--accent-text-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.porfolio-buttons-list {
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.porfolio-buttons-item {
+  margin-right: 8px;
+}
+
+.porfolio-buttons-item:last-child {
+  margin-right: 0;
+}
+
+.porfolio-cards-list,
+.porfolio-buttons-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.porfolio-cards-item {
+  width: calc((100% - 60px) / 3);
+}
+
+.porfolio-cards-item {
+  margin-right: var(--cards-gap);
+  margin-bottom: var(--cards-gap);
+}
+
+.porfolio-cards-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.porfolio-cards-item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+
+.card-content {
+  border-right: 1px solid var(--portfolio-card-border);
+  border-bottom: 1px solid var(--portfolio-card-border);
+  border-left: 1px solid var(--portfolio-card-border);
+}
+
+
+
+/* Колір секцій тексту (сірий) #757575 */
+/* Основний колір посилань, заголовків (чорний) #212121 */
+/* Акцентний колір посилань (блакитний) #2196F3 */
+/* Основний колір фону Хедер, Секція_2 (білий) #FFFFFF */
+/* Акцентний колір фону Секція_1, Футер (темно сірий) #2F303A */
+/* Акцентний колір фону Секція_3 (молочно білий) #F5F4FA */
+/* Колір контактів футер rgba(255, 255, 255, 0.6) */
